@@ -10,7 +10,7 @@ render_views
     end
     it "devrait avoir le bon titre" do
     	get 'home'
-    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby On Rails | Home")
+    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby on Rails | Home")
     	end
   end
 
@@ -21,7 +21,7 @@ render_views
     end
     it "devrait avoir le bon titre" do
     	get 'contact'
-    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby On Rails | Contact")
+    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby on Rails | Contact")
     	end
   end
 
@@ -32,7 +32,7 @@ render_views
     end
     it "devrait avoir le bon titre" do
     	get 'about'
-    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby On Rails | About")
+    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby on Rails | About")
     	end
   end
 
@@ -43,7 +43,7 @@ render_views
     end
     it "devrait avoir le bon titre" do
     	get 'help'
-    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby On Rails | Help")
+    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby on Rails | Help")
     	end
   end
 

@@ -10,7 +10,7 @@ render_views
     end
     it "devrait avoir le bon titre" do
     	get 'home'
-    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby On Rails | Accueil")
+    	response.should have_selector("title", :content => "Simple App du Tutoriel Ruby On Rails | Home")
     	end
   end
 
