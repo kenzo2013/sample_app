@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-require 'spec_helper'
+
 describe "LayoutLinks" do
 it "devrait trouver une page Accueil à '/'" do
 get '/'
@@ -17,9 +17,23 @@ end
 it "devrait trouver une page aide à '/help'" do
 get '/help'
 response.should have_selector('title', :content => "Help")
+end
 it "devrait avoir une page d'inscription à '/signup'" do
 get '/signup'
-response.should have_selector('title', :content => "Inscription")
+response.should have_selector('title', :content => "Submit")
+
 end
+it "devrait avoir le bon lien sur le layout" do
+	visit root_path
+	click_link "About"
+	response.should have_selector('title', :content => "About")
+	click_link "Help"
+	response.should have_selector('title', :content => "Help")
+	click_link "Contact"
+	response.should have_selector('title', :content => "Contact")
+	click_link "Home"
+	response.should have_selector('title', :content => "Home")
+	click_link "Submit"
+	response.should have_selector('title', :content => "Submit")
 end
 end

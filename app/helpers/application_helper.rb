@@ -6,5 +6,8 @@ def titre
 	else
 		"#{base_titre} | #{@titre}"
 	end
+
+
+
 end
 end

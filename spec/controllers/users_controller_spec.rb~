@@ -8,6 +8,7 @@ describe UsersController do
     it "returns http success" do
       get 'new'
       response.should be_success
+      end
     it "devrait avoir le titre adéquat" do
 get 'new'
 response.should have_selector("title", :content => "Inscription")
