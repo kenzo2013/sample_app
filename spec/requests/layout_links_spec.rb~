@@ -17,9 +17,11 @@ describe "LayoutLinks" do
 	it "devrait trouver une page aide à '/help'" do
 		get '/help'
 		response.should have_selector('title', :content => "Help")
+	end
 	it "devrait avoir une page d'inscription à '/signup'" do
 		get '/signup'
 		response.should have_selector('title', :content => "Inscription")
 	end
 
+end
 end

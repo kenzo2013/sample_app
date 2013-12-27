@@ -5,7 +5,7 @@ gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-
+gem 'gravatar_image_tag'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -54,4 +54,5 @@ group :test do
 	gem 'rspec'
 	gem 'webrat'
 	gem 'spork'
+	gem 'factory_girl_rails'
 end
