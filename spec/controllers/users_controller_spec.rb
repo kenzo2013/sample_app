@@ -8,10 +8,32 @@ describe UsersController do
     it "returns http success" do
       get 'new'
       response.should be_success
-      end
+    end
     it "devrait avoir le titre adéquat" do
-get 'new'
-response.should have_selector("title", :content => "Submit")
-end
-end
+	get 'new'
+	response.should have_selector("title", :content => "Inscription")
+    end
+  end
+  
+  describe "GET 'show'" do
+	before(:each) do
+		@user = FactoryGirl.create(:user)
+	end
+	it "devrait réussir" do
+		get :show, :id => @user
+		response.should be_success
+	end
+	it "devrait trouver le bon utilisateur" do
+		get :show, :id => @user
+		assigns(:user).should == @user
+	end
+	it "devrait inclure le nom de l'utilisateur" do
+		get :show, :id => @user
+		response.should have_selector("h1", :content => @user.name)
+	end
+	it "devrait avoir une image de profil" do
+		get :show, :id => @user
+		response.should have_selector("h1>img", :class => "gravatar")
+	end
+  end
 end

@@ -1,8 +1,15 @@
 <header>
+<<<<<<< HEAD
 
 
 <%= link_to logo, 'root_path' %>
 
+=======
+<% logo = image_tag("logo.png", :alt => "Application exemple", :class => "round") %>
+
+<%= link_to logo, root_path %>
+
+>>>>>>> modeling-users
 <nav class="round">
 <ul>
 <li><%= link_to "Home", root_path %></li>

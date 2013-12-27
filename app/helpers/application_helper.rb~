@@ -6,10 +6,13 @@ def titre
 	else
 		"#{base_titre} | #{@titre}"
 	end
+<<<<<<< HEAD
 def logo
     image_tag("logo.png", :alt => "Sample App", :class => "round")
   	end
 
 
+=======
+>>>>>>> modeling-users
 end
 end

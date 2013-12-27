@@ -1,10 +1,12 @@
 AppSample::Application.routes.draw do
  
-  get "users/new"
-  match '/signup', :to => 'users#new' ,  via: [:get, :post]
-  match '/contact', :to => 'pages#contact',  via: [:get, :post]
-  match '/about', :to => 'pages#about',   via: [:get, :post]
-  match '/help', :to => 'pages#help',  via: [:get, :post]
+
+ resources :users
+match '/signup', :to => 'users#new' , via: [:get]
+  match '/contact', :to => 'pages#contact', via: [:get]
+  match '/about', :to => 'pages#about',  via: [:get]
+  match '/help', :to => 'pages#help', via: [:get]
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
