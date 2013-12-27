@@ -44,8 +44,11 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+
 group :development do
 	gem 'rspec-rails'
+	
 end
 group :test do
 	gem 'rspec'
