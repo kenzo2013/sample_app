@@ -10,4 +10,7 @@ factory :user do |user|
  user.password_confirmation "foobar"
 	
 end
+sequence :email do |n|
+ "person-#{n}@example.com"
+end
 end
