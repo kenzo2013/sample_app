@@ -24,6 +24,12 @@ class User < ActiveRecord::Base
 			user = find_by_id(id)
 			(user && user.salt == cookie_salt) ? user : nil
 		end
+		has_many :microposts, :dependent => :destroy
+		
+		def feed
+			# C'est un préliminaire. Cf. chapitre 12 pour l'implémentation complète.
+			Micropost.where("user_id = ?", id)
+		end
 	private
 		def encrypt_password
 			self.salt = make_salt if new_record?
